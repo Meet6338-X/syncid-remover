@@ -1,0 +1,31 @@
+{
+  "name": "desynth-monorepo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Next-Generation AI Watermark (SynthID, Tree-Ring) Neutralization Engine & Forensic Provenance Shield",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "npm run dev --workspace=@desynth/web",
+    "web:build": "npm run build --workspace=@desynth/web",
+    "api:dev": "python apps/api/main.py",
+    "api:test": "python apps/api/tests_pipeline.py",
+    "cli": "python apps/api/cli.py"
+  },
+  "keywords": [
+    "synthid",
+    "ai-watermark",
+    "steganography",
+    "c2pa",
+    "fastapi",
+    "nextjs",
+    "react-19",
+    "forensics",
+    "imagen3",
+    "dalle3"
+  ],
+  "author": "Meet6338-X",
+  "license": "MIT"
+}
