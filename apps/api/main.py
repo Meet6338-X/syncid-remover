@@ -62,7 +62,11 @@ async def analyze_image(file: UploadFile = File(...)):
     if img_bgr is None:
         raise HTTPException(status_code=400, detail="Invalid image format.")
 
-    forensics = DetectorOracle.evaluate(img_bgr, has_c2pa=meta["has_ai_metadata"])
+    forensics = DetectorOracle.evaluate(
+        img_bgr,
+        has_c2pa=meta["has_ai_metadata"],
+        detected_signatures=meta["detected_signatures"],
+    )
 
     return {
         "filename": file.filename,

@@ -48,7 +48,11 @@ def cmd_analyze(args):
         print("Error: Could not decode image.")
         sys.exit(1)
 
-    eval_result = DetectorOracle.evaluate(img, has_c2pa=meta["has_ai_metadata"])
+    eval_result = DetectorOracle.evaluate(
+        img,
+        has_c2pa=meta["has_ai_metadata"],
+        detected_signatures=meta["detected_signatures"],
+    )
 
     print("\n--- FORENSIC ANALYSIS REPORT ---")
     print(format_table(eval_result))

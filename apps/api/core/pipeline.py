@@ -104,7 +104,11 @@ class DeSynthPipeline:
         if img_orig_bgr is None:
             raise ValueError("Failed to decode image from provided bytes.")
 
-        eval_pre = DetectorOracle.evaluate(img_orig_bgr, has_c2pa=meta_pre["has_ai_metadata"])
+        eval_pre = DetectorOracle.evaluate(
+            img_orig_bgr,
+            has_c2pa=meta_pre["has_ai_metadata"],
+            detected_signatures=meta_pre["detected_signatures"],
+        )
 
         # Stage 1: Spatial Micro-Geometric Resampling & Bilateral Filtering
         stage1_bgr, s1_meta = self.spatial.process(img_orig_bgr)
