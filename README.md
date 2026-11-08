@@ -111,7 +111,7 @@ Extensive empirical evaluations conducted over 500 AI-generated images across co
 
 ---
 
-## 📁 Repository Structure (Harkirat 2026 Stack)
+## 📁 Repository Structure (Modern Monorepo Architecture)
 
 ```
 syncid-remover/
