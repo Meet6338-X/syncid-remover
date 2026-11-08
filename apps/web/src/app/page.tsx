@@ -436,7 +436,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        DeSynth Pro Engine — Built on Harkirat 2026 Tech Stack (Next.js 15, React 19, TypeScript, FastAPI).
+        DeSynth Pro Engine — Production High-Performance Vision Stack (Next.js 15, React 19, TypeScript, FastAPI).
       </footer>
     </div>
   );
